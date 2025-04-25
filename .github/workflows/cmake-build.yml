@@ -1,0 +1,28 @@
+name: cmake-for-macos
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+env:
+  BUILD_TYPE: Release
+  Qt5_DIR: /usr/local/opt/qt@5
+
+jobs:
+  build:
+    runs-on: macos-15
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Deps
+      run: brew install qt@5
+
+    - name: Configure CMake
+      run: cmake ${{github.workspace}}/src -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+
+    - name: Build
+      # Build your program with the given configuration
+      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
