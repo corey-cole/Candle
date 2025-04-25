@@ -9,7 +9,7 @@ on:
 
 env:
   BUILD_TYPE: Release
-  Qt5_DIR: /usr/local/opt/qt@5
+  Qt5_DIR: /opt/homebrew/opt/qt@5
 
 jobs:
   build:
