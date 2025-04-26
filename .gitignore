@@ -62,3 +62,16 @@ bin/*
 /src/Candle_resource.aps
 /src/Candle_resource.rc
 /src/ui_*
+
+CMakeCache.txt
+CMakeFiles/
+Candle.app/
+Makefile
+cmake_install.cmake
+src/fonts.qrc.depends
+src/images.qrc.depends
+src/shaders.qrc.depends
+Candle_autogen/
+qrc_fonts.cpp
+qrc_images.cpp
+qrc_shaders.cpp
