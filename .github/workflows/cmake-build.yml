@@ -35,3 +35,6 @@ jobs:
       with:
         name: candle.arm64.zip
         path: candle.zip
+    
+    - name: Create Release
+      run: gh release create './candle.zip#MacOS15-arm64'
