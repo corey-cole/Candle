@@ -10,6 +10,7 @@ on:
 env:
   BUILD_TYPE: Release
   Qt5_DIR: /opt/homebrew/opt/qt@5
+  GH_TOKEN: ${{ github.token }}
 
 jobs:
   build:
